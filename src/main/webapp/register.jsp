@@ -60,7 +60,7 @@
 		
 			<div class="row-fluid">
 				<div class="span12 center login-header">
-					<h2>登录</h2>
+					<h2>注册</h2>
 				</div><!--/span-->
 			</div><!--/row-->
 			
@@ -69,7 +69,7 @@
 					<div class="alert alert-info">
 							用户名与密码
 					</div>
-					<form class="form-horizontal" action="login?methodName=login" method="post">
+					<form class="form-horizontal" action="login?methodName=register" method="post">
 						<fieldset>
 							<div class="input-prepend" title="Username" data-rel="tooltip">
 								<span class="add-on"><i class="icon-user"></i></span><input autofocus class="input-large span10" name="username" id="username" type="text" value="admin" />
@@ -87,7 +87,7 @@
 							<div class="clearfix"></div>
 
 							<p class="center span5">
-							<button type="submit" class="btn btn-primary">Login</button>
+							<button type="submit" class="btn btn-primary">提交</button>
 							</p>
 						</fieldset>
 					</form>

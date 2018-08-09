@@ -20,12 +20,6 @@ import java.lang.reflect.Method;
     1.所有的请求都会进入此类
     2.获取请求，根据请求分发到各个子Servlet
  */
-
-
-
-
-
-
 public abstract class BaseServlet extends HttpServlet{
 
     /*
@@ -68,6 +62,7 @@ public abstract class BaseServlet extends HttpServlet{
                 System.out.println("method======="+method);
                 try {
                     //执行方法
+
                     obje = method.invoke(this, request, response);
                     System.out.println("obje》》》》》》"+obje);
                 } catch (IllegalAccessException e) {
