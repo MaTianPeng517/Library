@@ -10,6 +10,8 @@ import java.util.List;
 
 public class UserServiceimpl implements UserService {
     UserDao userDao=new UserDaoimpl();
+
+    //注册
     @Override
     public int add(Users users) {
 
@@ -44,5 +46,16 @@ public class UserServiceimpl implements UserService {
     @Override
     public List<Users> findAllByPage(PageUtil util, Object... params) {
         return null;
+    }
+
+    //ajax验证用户名称
+    @Override
+    public String validateName(String username) {
+        return userDao.validateName(username);
+    }
+    //登录
+    @Override
+    public Users login(String username, String passwordInDB) {
+        return userDao.login(username,passwordInDB);
     }
 }

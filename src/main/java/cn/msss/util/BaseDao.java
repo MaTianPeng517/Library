@@ -14,7 +14,7 @@ public class BaseDao {
     //JDBC需要的API
     private Connection con;
     private PreparedStatement ps;
-    private ResultSet rs;
+    protected ResultSet rs;
 
     //1.连接数据库
     public  boolean  getConnection(){
@@ -76,9 +76,6 @@ public class BaseDao {
                 rs=ps.executeQuery();
             } catch (SQLException e) {
                 e.printStackTrace();
-            }finally {
-                //释放资源
-                close();
             }
         }
         return rs;

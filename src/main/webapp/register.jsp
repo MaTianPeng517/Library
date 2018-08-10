@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
 <html lang="en">
 <head>
 	<!--
@@ -74,6 +75,7 @@
 							<div class="input-prepend" title="Username" data-rel="tooltip">
 								<span class="add-on"><i class="icon-user"></i></span><input autofocus class="input-large span10" name="username" id="username" type="text" value="admin" />
 							</div>
+							<span id="tips"></span>
 							<div class="clearfix"></div>
 
 							<div class="input-prepend" title="Password" data-rel="tooltip">
@@ -170,7 +172,7 @@
 	<script src="js/jquery.history.js"></script>
 	<!-- application script for Charisma demo -->
 	<script src="js/charisma.js"></script>
-	
+	<script src="js/local/register.js"></script>
 		
 </body>
 </html>

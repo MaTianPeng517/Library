@@ -18,6 +18,11 @@ public class ResuUtil {
         return this;
     }
 
+    public ResuUtil getSuccessfulmethod(){
+        this.status=1;
+        return this;
+    }
+
     //错误方法
     public ResuUtil getErrormethod(String message){
        this.message=message;
