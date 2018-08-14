@@ -16,7 +16,7 @@ public interface IBaseDao<T> {
     //注册
     int add(Users users);
     //删除
-    int delete();
+    int delete(Serializable id);
     //修改
     int update();
     //

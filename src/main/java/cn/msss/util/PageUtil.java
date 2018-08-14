@@ -1,12 +1,14 @@
 package cn.msss.util;
 
-public class PageUtil {
+import java.util.List;
+
+public class PageUtil<E> {
 
     /*
         分页
      */
-
-    private Integer pageIndex;//当前页
+    private List<E> list;
+    private Integer pageIndex=1;//当前页
     private Integer pageSize=2;//页大小
     private Integer pageCount;//总页数
     private Integer totalCount;//总记录数
@@ -25,13 +27,13 @@ public class PageUtil {
     @Override
     public String toString() {
         return "PageUtil{" +
-                "pageIndex=" + pageIndex +
+                "list=" + list +
+                ", pageIndex=" + pageIndex +
                 ", pageSize=" + pageSize +
                 ", pageCount=" + pageCount +
                 ", totalCount=" + totalCount +
                 '}';
     }
-
 
     public Integer getPageIndex() {
         return pageIndex;
@@ -61,8 +63,16 @@ public class PageUtil {
         return totalCount;
     }
 
-    /*
+    public List<E> getList() {
+        return list;
+    }
 
+    public void setList(List<E> list) {
+        this.list = list;
+    }
+
+    /*
+        计算获取总页数
      */
     public void setTotalCount(Integer totalCount) {
         if (totalCount>0){

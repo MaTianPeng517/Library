@@ -19,8 +19,8 @@ public class UserServiceimpl implements UserService {
     }
 
     @Override
-    public int delete() {
-        return 0;
+    public int delete(Serializable id) {
+        return userDao.delete(id);
     }
 
     @Override
@@ -40,12 +40,15 @@ public class UserServiceimpl implements UserService {
 
     @Override
     public int findRownum() {
-        return 0;
+        return userDao.findRownum();
     }
 
+
+    //分页
     @Override
     public List<Users> findAllByPage(PageUtil util, Object... params) {
-        return null;
+
+        return userDao.findAllByPage(util);
     }
 
     //ajax验证用户名称
